@@ -9,7 +9,7 @@ for(i=0;i<3;i++){
 
 	promises.push(
 		new Promise((resolved, rejected)=>{
-		  setTimeout(() => resolve({ i, time: time.toFixed(3) }), time * 1000);
+		  setTimeout(() => resolved({ i, time: time.toFixed(3) }), time * 1000);
 		})
 	)
 }
