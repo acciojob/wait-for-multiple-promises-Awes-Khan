@@ -1,6 +1,7 @@
 
 const tbody = document.getElementById("output");
 const row = tbody.insertRow(0);
+row.id = "loading";
 row.innerHTML = `<td colspan="2">Loading...</td>`;
 
 let promises = [];
