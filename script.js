@@ -24,12 +24,12 @@ Promise.all(promises).then((result)=>{
     result.forEach(({i, time})=>{
       const row = document.createElement("tr");
       row.innerHTML = `<td>Promise ${i}</td><td>${time} seconds</td>`;
-      table.appendChild(row);
+      tbody.appendChild(row);
     });
     
     const totalRow = document.createElement("tr");
     totalRow.innerHTML = `<td>Total</td><td>${totalTime.toFixed(3)} seconds</td>`;
-    table.appendChild(totalRow);
+    tbody.appendChild(totalRow);
     
 }).catch((error)=>{});
 
