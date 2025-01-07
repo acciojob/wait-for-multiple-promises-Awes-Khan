@@ -1,8 +1,8 @@
 
 const tbody = document.getElementById("output");
-const row = tbody.insertRow(0);
-row.id = "loading";
-row.innerHTML = `<td colspan="2">Loading...</td>`;
+const loadingRow = tbody.insertRow(0);
+loadingRow.id = "loading";
+loadingRow.innerHTML = `<td colspan="2">Loading...</td>`;
 
 let promises = [];
 for(i=0;i<3;i++){
@@ -23,7 +23,7 @@ Promise.all(promises).then((result)=>{
     
     result.forEach(({i, time})=>{
       const row = document.createElement("tr");
-      row.innerHTML = `<td>Promise ${id}</td><td>${time} seconds</td>`;
+      row.innerHTML = `<td>Promise ${i}</td><td>${time} seconds</td>`;
       table.appendChild(row);
     });
     
